@@ -1,4 +1,10 @@
 # 忽略所有的 .txt 文件
+<<<<<<< HEAD
 *.zip
 *.db
 *.msi
+=======
+.zip
+.db
+.msi
+>>>>>>> e9e8f4f3deb0d936f31d5f099c8e454d12f67ba8
