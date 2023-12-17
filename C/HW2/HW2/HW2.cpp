@@ -6,12 +6,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Error.h"
-#include "singke_linked_list.h"
+#include "single_linked_list.h"
 
 
 int main()
 {
-    ins();
+    node* x = NULL;
+    ins(1, &x);
+    ins(4, &x);
+    ins(3, &x);
+    ins(2, &x);
+
+    free(x);
 }
 
 // 執行程式: Ctrl + F5 或 [偵錯] > [啟動但不偵錯] 功能表

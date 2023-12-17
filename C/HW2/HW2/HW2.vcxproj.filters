@@ -26,7 +26,7 @@
     <ClInclude Include="Error.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
-    <ClInclude Include="singke_linked_list.h">
+    <ClInclude Include="single_linked_list.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
   </ItemGroup>
