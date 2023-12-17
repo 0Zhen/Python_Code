@@ -1,0 +1,5 @@
+﻿  persomal_test.cpp
+D:\ChrisLee\personal\Chris\Personal Git\Code\C\persomal_test\persomal_test\persomal_test.cpp(11,15): error C2440: '正在初始化': 無法由 'initializer list' 轉換為 'uint32_t'
+D:\ChrisLee\personal\Chris\Personal Git\Code\C\persomal_test\persomal_test\persomal_test.cpp(11,15): message : 初始設定式清單包含太多項目
+D:\ChrisLee\personal\Chris\Personal Git\Code\C\persomal_test\persomal_test\persomal_test.cpp(12,9): warning C4477: 'printf' : 格式字串 '%d' 需要 'int' 類型的引數，但 variadic 引數 1 的類型為 'size_t'
+D:\ChrisLee\personal\Chris\Personal Git\Code\C\persomal_test\persomal_test\persomal_test.cpp(12,9): message : 請考慮在格式字串中使用 '%zd'

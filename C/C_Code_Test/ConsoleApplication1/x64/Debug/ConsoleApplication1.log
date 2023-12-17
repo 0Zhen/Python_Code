@@ -1,0 +1,4 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 中繼目錄 (x64\Debug\) 包含從其他專案 (ConsoleApplication1.vcxproj) 共用的檔案。這可能導致錯誤的清除和重建行為。
+  Stack.cpp
+D:\ChrisLee\personal\Chris\Personal Git\Code\C\Stack.cpp(63): warning C4715: 'pop': 不是所有控制路徑都傳回值
+  ConsoleApplication1.vcxproj -> D:\ChrisLee\personal\Chris\Personal Git\Code\C\C_Code_Test\x64\Debug\C_Code_Test.exe
