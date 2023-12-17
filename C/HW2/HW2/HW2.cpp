@@ -13,11 +13,16 @@ int main()
 {
     node* x = NULL;
     ins(1, &x);
+    printf("\n");
     ins(4, &x);
+    printf("\n");
     ins(3, &x);
+    printf("\n");
+    ins(6, &x);
+    printf("\n");
+
     ins(2, &x);
 
-    free(x);
 }
 
 // 執行程式: Ctrl + F5 或 [偵錯] > [啟動但不偵錯] 功能表
