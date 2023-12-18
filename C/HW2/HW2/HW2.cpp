@@ -12,16 +12,33 @@
 int main()
 {
     node* x = NULL;
-    ins(1, &x);
-    printf("\n");
-    ins(4, &x);
-    printf("\n");
-    ins(3, &x);
-    printf("\n");
-    ins(6, &x);
-    printf("\n");
+    append(1, &x);
+    display(*x);
 
-    ins(2, &x);
+
+    append(4, &x);
+    display(*x);
+
+
+    append(3, &x);
+    display(*x);
+
+    append(6, &x);
+    display(*x);
+
+    append(2, &x);
+    display(*x);
+
+    ins(1, 9, &x);
+
+    display(*x);
+
+    del(9, &x);
+
+    display(*x);
+
+    del(16, &x);
+    display(*x);
 
 }
 
