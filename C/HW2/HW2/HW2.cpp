@@ -11,34 +11,15 @@
 
 int main()
 {
-    node* x = NULL;
-    append(1, &x);
-    display(*x);
+    node x;
+    x.value = 1;
+    node* head_p = &x;
+    
 
 
-    append(4, &x);
-    display(*x);
+    append(1, &head_p);
+    display(*head_p);
 
-
-    append(3, &x);
-    display(*x);
-
-    append(6, &x);
-    display(*x);
-
-    append(2, &x);
-    display(*x);
-
-    ins(1, 9, &x);
-
-    display(*x);
-
-    del(9, &x);
-
-    display(*x);
-
-    del(16, &x);
-    display(*x);
 
 }
 
