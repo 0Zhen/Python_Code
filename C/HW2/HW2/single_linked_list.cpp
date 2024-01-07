@@ -2,88 +2,126 @@
 
 
 
-uint32_t append(int new_data, node** head_ref )
+uint32_t single_append(int new_data, single_node** head_ref)
 {
-    struct node* new_node = (struct node*)malloc(sizeof(struct node)); // 宣告一個位置給新的連結，這個位置大小等於node
-    struct node* last = *head_ref; // 宣告一個指標指向(*head_ref)的位置
+    struct single_node* new_single_node = (struct single_node*)malloc(sizeof(struct single_node)); // 宣告一個位置給新的連結，這個位置大小等於single_node
+    struct single_node* current = *head_ref; // 宣告一個指標指向(*head_ref)的位置
 
-    new_node->value = new_data; // 把新的連結資料付值
-    new_node->next = NULL; // 目前先將新的連結放在最後面
-    printf("head_ref = &head_p %d\n", head_ref);
-    printf("*head_ref = %d\n", *head_ref);
-    printf("**head_ref = %d\n", **head_ref);
-    printf("*last = %d = \n", *last);
+    new_single_node->value = new_data; // 把新的連結資料付值
+    new_single_node->next = NULL; // 目前先將新的連結放在最後面
 
-    ///* 若這個傳進來的指標是空的，則代表沒有其他節點，因此新的連結就是他自己*/
-    //if (head_ref->next == NULL) {
-    //    *head_ref = new_node;
-    //    return RET_SUCCESS;
-    //}
 
-    //while (last->next != NULL) { // last->next == (*last).next
-    //    last = last->next;
-    //}
+    /* 若這個傳進來的指標是空的，則代表沒有其他節點，因此新的連結就是他自己*/
+    if ( (*head_ref) == NULL)
+    {
 
-    //last->next = new_node;
+        return RET_ERROR_EMPTY;
+    }
+    else
+    {
+        while (current->next != NULL) { // last->next == (*last).next
+            current = current->next;
+        }
+
+        current->next = new_single_node;
+
+    }
+
 
 
     return RET_SUCCESS;
 }
 
-uint32_t display(node link)
+uint32_t single_display(single_node** link)
 {
-    node current = link;
+    single_node* current = *link;
 
-    while (current.next != NULL)
+    while (current->next != NULL)
     {
-        printf("%d -> ", current.value);
-        current = *current.next;
+        printf("%d -> ", current->value);
+        current = current->next;
     };
 
-    printf("%d -> \n", current.value);
+    printf("%d -> \n", current->value);
 
     return RET_SUCCESS;
 }
 
-uint32_t ins(int before_target, int value, node** link)
+uint32_t single_ins(int before_target, int value, single_node** link)
 {
-    node* new_node = (struct node*)malloc(sizeof(struct node));
-    node* last = *link;
+    single_node* new_single_node = (struct single_node*)malloc(sizeof(struct single_node));
+    single_node* current = *link;
 
-    new_node->value = value;
+    new_single_node->value = value;
 
-    node* current = *link;
-    node* pre = new_node;
+    single_node* pre = new_single_node;
 
-    if (last->value == before_target)
+    if (current->value == before_target)
     {
-        new_node->next = last;
+        new_single_node->next = *link;
+        *link = new_single_node;
+        return RET_SUCCESS;
+    }
+    else
+    {
+        printf("current value = % d\n", current->value);
+        while (current->value != before_target)
+        {
+            if (current->next == NULL)
+            {
+                return RET_ERROR_INVALID_DATA;
+            }
+            pre = current;
+            current = current->next;
+        }
+        pre->next = new_single_node;
+        new_single_node->next = current;
+
+
     }
 
-    while (last->value != before_target)
-    {
-        pre = last;
-        last = last->next;
-    }
-    pre->next = new_node;
-    new_node->next = last;
 
-    *link = pre;
+    
     
 
     return RET_SUCCESS;
 }
 
-uint32_t del(int target, node** link)
+uint32_t single_del(int target, single_node** link)
 {
-    node* del_node = NULL;
-    node* last = *link;
-    node** head = NULL;
+    single_node* del_single_node = NULL;
+    single_node* current = *link;
+    single_node* pre = NULL;
+    
+    if (current->value == target)
+    {
+        *link = current->next;
+        free(current);
+        return RET_SUCCESS;
+    }
+    else
+    {
+       
+        while (current->value != target)
+        {
+            if (current->next == NULL)
+            {
+                return RET_ERROR_INVALID_DATA;
+            }
+            pre = current;
+            current = current->next;
+        }
+
+        pre->next = current->next;
+        free(current);
+
+
+    }
 
 
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-        return RET_SUCCESS;
+    return RET_SUCCESS;
     
 
 }

@@ -11,14 +11,30 @@
 
 int main()
 {
-    node x;
+    single_node x;
     x.value = 1;
-    node* head_p = &x;
+    x.next = NULL;
+    single_node* head_p = &x;
+    single_node** head_pp = &head_p;
     
 
 
-    append(1, &head_p);
-    display(*head_p);
+    single_append(2, head_pp);
+    single_display(head_pp);
+    single_append(3, head_pp);
+    single_display(head_pp);
+    single_append(4, head_pp);
+    single_display(head_pp);
+    single_ins(2, 9, head_pp);
+    single_display(head_pp);
+    single_ins(1, 0, head_pp);
+    single_display(head_pp);
+    single_del(2, head_pp);
+    single_display(head_pp);
+    single_del(0, head_pp);
+    single_display(head_pp);
+
+
 
 
 }

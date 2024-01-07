@@ -5,15 +5,14 @@
 #include <string.h>
 #include "Error.h"
 
-struct node
+struct single_node
 {
 	int value;
-	struct node* next;
+	struct single_node* next;
 };
    
-uint32_t append(int value, node** link);
-uint32_t ins(int before_target, int value, node** link);
-uint32_t del(int target, node** link);
-uint32_t mod(void);
-uint32_t display(node link);
+uint32_t single_append(int value, single_node** link);
+uint32_t single_ins(int before_target, int value, single_node** link);
+uint32_t single_del(int target, single_node** link);
+uint32_t single_display(single_node** link);
 
