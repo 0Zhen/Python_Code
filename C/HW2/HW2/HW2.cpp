@@ -8,32 +8,38 @@
 #include "Error.h"
 #include "single_linked_list.h"
 #include "doubly_linked_list.h"
+#include "four_way_linked_list.h"
 
 int main()
 {
-    //single_node x;
-    //x.value = 1;
-    //x.next = NULL;
-    //single_node* head_p = &x;
-    //single_node** head_pp = &head_p;
-    //
+    /*------------------single-----------------------------------*/
+    /*
+    single_node x;
+    x.value = 1;
+    x.next = NULL;
+    single_node* head_p = &x;
+    single_node** head_pp = &head_p;
+    
 
 
-    //single_append(2, head_pp);
-    //single_display(head_pp);
-    //single_append(3, head_pp);
-    //single_display(head_pp);
-    //single_append(4, head_pp);
-    //single_display(head_pp);
-    //single_ins(2, 9, head_pp);
-    //single_display(head_pp);
-    //single_ins(1, 0, head_pp);
-    //single_display(head_pp);
-    //single_del(2, head_pp);
-    //single_display(head_pp);
-    //single_del(0, head_pp);
-    //single_display(head_pp);
+    single_append(2, head_pp);
+    single_display(head_pp);
+    single_append(3, head_pp);
+    single_display(head_pp);
+    single_append(4, head_pp);
+    single_display(head_pp);
+    single_ins(2, 9, head_pp);
+    single_display(head_pp);
+    single_ins(1, 0, head_pp);
+    single_display(head_pp);
+    single_del(2, head_pp);
+    single_display(head_pp);
+    single_del(0, head_pp);
+    single_display(head_pp);
+    */
 
+    /*------------------double-----------------------------------*/
+    /*
     double_node y;
     y.value = 0;
     y.pre = NULL;
@@ -55,6 +61,18 @@ int main()
     double_display(head_pp);
     double_del(5, head_pp);
     double_display(head_pp);
+    */
+
+    /*------------------four way---------------------------------*/
+    four_way_node y;
+    y.value = 0;
+    y.pre = NULL;
+    y.next = NULL;
+    y.down = NULL;
+    y.up = NULL;
+    four_way_node* head_p = &y;
+    four_way_node** head_pp = &head_p;
+
 }
 
 // 執行程式: Ctrl + F5 或 [偵錯] > [啟動但不偵錯] 功能表
