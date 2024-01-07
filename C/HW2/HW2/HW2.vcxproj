@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="doubly_linked_list.cpp" />
     <ClCompile Include="HW2.cpp" />
     <ClCompile Include="single_linked_list.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="doubly_linked_list.h" />
     <ClInclude Include="Error.h" />
     <ClInclude Include="single_linked_list.h" />
   </ItemGroup>

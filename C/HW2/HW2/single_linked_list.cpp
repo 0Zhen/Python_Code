@@ -64,7 +64,6 @@ uint32_t single_ins(int before_target, int value, single_node** link)
     }
     else
     {
-        printf("current value = % d\n", current->value);
         while (current->value != before_target)
         {
             if (current->next == NULL)
@@ -79,8 +78,6 @@ uint32_t single_ins(int before_target, int value, single_node** link)
 
 
     }
-
-
     
     
 

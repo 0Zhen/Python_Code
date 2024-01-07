@@ -21,12 +21,18 @@
     <ClCompile Include="single_linked_list.cpp">
       <Filter>資源檔</Filter>
     </ClCompile>
+    <ClCompile Include="doubly_linked_list.cpp">
+      <Filter>資源檔</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
     <ClInclude Include="single_linked_list.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="doubly_linked_list.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
   </ItemGroup>
