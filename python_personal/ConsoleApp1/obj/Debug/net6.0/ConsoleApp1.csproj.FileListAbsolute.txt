@@ -1,0 +1,15 @@
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.exe
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.deps.json
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.runtimeconfig.json
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.dll
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.pdb
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.AssemblyReference.cache
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfoInputs.cache
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfo.cs
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.dll
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\obj\Debug\net6.0\refint\ConsoleApp1.dll
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.pdb
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.genruntimeconfig.cache
+D:\ChrisLee\personal\Chris\Personal Git\Code\python_personal\ConsoleApp1\obj\Debug\net6.0\ref\ConsoleApp1.dll

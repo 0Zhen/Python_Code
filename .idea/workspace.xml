@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="19515a13-5a9b-4b77-9600-12aced0074f4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/stock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stock.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Untitled.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/.vs/HW2/FileContentIndex/1cb82c60-1640-4cc7-a0c5-4baa4952917a.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/.vs/HW2/FileContentIndex/360637b7-576d-450b-a6d6-75a6cfbab36f.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/.vs/HW2/FileContentIndex/431d1d67-c088-4d12-9483-a1ea27ee77a2.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/.vs/HW2/FileContentIndex/46ee6216-bd26-434b-9c5b-b506befe0620.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/.vs/HW2/FileContentIndex/7dd704cf-d40b-4c18-8e10-e92329c128ea.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/.vs/HW2/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/.vs/HW2/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/.vs/HW2/v17/ipch/AutoPCH/205fb2035510c9b5/SINGLE_LINKED_LIST.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/.vs/HW2/v17/ipch/AutoPCH/205fb2035510c9b5/SINGLE_LINKED_LIST.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/.vs/HW2/v17/ipch/AutoPCH/50df069c68a8c01b/HW2.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/.vs/HW2/v17/ipch/AutoPCH/50df069c68a8c01b/HW2.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/HW2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/HW2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/four_way_linked_list.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/four_way_linked_list.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.exe.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.log" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.obj" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/HW2.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/HW2.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/HW2.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/doubly_linked_list.obj" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/doubly_linked_list.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/single_linked_list.obj" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/single_linked_list.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/HW2/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/x64/Debug/HW2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/x64/Debug/HW2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C/HW2/x64/Debug/HW2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/C/HW2/x64/Debug/HW2.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,7 +64,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

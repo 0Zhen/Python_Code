@@ -39,29 +39,29 @@ int main()
     */
 
     /*------------------double-----------------------------------*/
-    /*
-    double_node y;
-    y.value = 0;
-    y.pre = NULL;
-    y.next = NULL;
-    double_node* head_p = &y;
-    double_node** head_pp = &head_p;
+    
+    //double_node y;
+    //y.value = 0;
+    //y.pre = NULL;
+    //y.next = NULL;
+    //double_node* head_p = &y;
+    //double_node** head_pp = &head_p;
 
-    double_append(1, head_pp);
-    double_display(head_pp);
-    double_append(2, head_pp);
-    double_display(head_pp);
-    double_prepend(3, head_pp);
-    double_display(head_pp);
-    double_prepend(5, head_pp);
-    double_display(head_pp);
-    double_ins(2, 7, head_pp);
-    double_display(head_pp);
-    double_ins(1, 8, head_pp);
-    double_display(head_pp);
-    double_del(5, head_pp);
-    double_display(head_pp);
-    */
+    //double_append(1, head_pp);
+    //double_display(head_pp);
+    //double_append(2, head_pp);
+    //double_display(head_pp);
+    //double_prepend(3, head_pp);
+    //double_display(head_pp);
+    //double_prepend(5, head_pp);
+    //double_display(head_pp);
+    //double_ins(2, 7, head_pp);
+    //double_display(head_pp);
+    //double_ins(1, 8, head_pp);
+    //double_display(head_pp);
+    //double_del(5, head_pp);
+    //double_display(head_pp);
+    //
 
     /*------------------four way---------------------------------*/
     four_way_node y;
@@ -72,6 +72,12 @@ int main()
     y.up = NULL;
     four_way_node* head_p = &y;
     four_way_node** head_pp = &head_p;
+    four_way_append(1, head_pp);
+    four_way_append(3, head_pp);
+    four_way_button(9, head_pp);
+    four_way_prepend(2, head_pp);
+
+    four_way_display(head_pp);
 
 }
 
