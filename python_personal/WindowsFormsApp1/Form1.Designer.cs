@@ -69,15 +69,16 @@
             this.fraction_load = new System.Windows.Forms.Label();
             this.Torque = new System.Windows.Forms.Label();
             this.motor_speed = new System.Windows.Forms.Label();
+            this.Power = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // chris
             // 
             this.chris.AutoSize = true;
-            this.chris.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.chris.Location = new System.Drawing.Point(713, 421);
+            this.chris.Font = new System.Drawing.Font("微軟正黑體 Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chris.Location = new System.Drawing.Point(651, 416);
             this.chris.Name = "chris";
-            this.chris.Size = new System.Drawing.Size(152, 20);
+            this.chris.Size = new System.Drawing.Size(181, 25);
             this.chris.TabIndex = 1;
             this.chris.Text = "Create by ChrisLee";
             this.chris.Click += new System.EventHandler(this.label1_Click);
@@ -317,7 +318,7 @@
             // slope_box
             // 
             this.slope_box.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.slope_box.Location = new System.Drawing.Point(25, 24);
+            this.slope_box.Location = new System.Drawing.Point(25, 28);
             this.slope_box.Name = "slope_box";
             this.slope_box.Size = new System.Drawing.Size(80, 30);
             this.slope_box.TabIndex = 17;
@@ -330,9 +331,10 @@
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.Location = new System.Drawing.Point(25, 320);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 19);
+            this.label2.Size = new System.Drawing.Size(189, 19);
             this.label2.TabIndex = 32;
-            this.label2.Text = "空氣密度(kg/m^3)";
+            this.label2.Text = "空氣密度(kg/m^3) ex:1.17";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // air_density_box
             // 
@@ -359,9 +361,9 @@
             this.label11.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label11.Location = new System.Drawing.Point(122, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 19);
+            this.label11.Size = new System.Drawing.Size(116, 19);
             this.label11.TabIndex = 35;
-            this.label11.Text = "風阻係數";
+            this.label11.Text = "風阻係數 ex: 0.3";
             // 
             // wind_factor_box
             // 
@@ -388,9 +390,9 @@
             this.label17.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label17.Location = new System.Drawing.Point(122, 60);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(99, 19);
+            this.label17.Size = new System.Drawing.Size(146, 19);
             this.label17.TabIndex = 37;
-            this.label17.Text = "迎風面積係數";
+            this.label17.Text = "迎風面積係數 ex: 0.4";
             // 
             // wind_area_factor_box
             // 
@@ -408,9 +410,9 @@
             this.label18.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label18.Location = new System.Drawing.Point(122, 111);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(144, 19);
+            this.label18.Size = new System.Drawing.Size(196, 19);
             this.label18.TabIndex = 39;
-            this.label18.Text = "接觸面滾動摩擦係數";
+            this.label18.Text = "接觸面滾動摩擦係數 ex:0.01";
             this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // friction_factor_box
@@ -426,52 +428,66 @@
             // wind_load
             // 
             this.wind_load.AutoSize = true;
-            this.wind_load.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.wind_load.Location = new System.Drawing.Point(454, 55);
+            this.wind_load.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.wind_load.Location = new System.Drawing.Point(480, 33);
             this.wind_load.Name = "wind_load";
-            this.wind_load.Size = new System.Drawing.Size(80, 25);
+            this.wind_load.Size = new System.Drawing.Size(103, 31);
             this.wind_load.TabIndex = 40;
             this.wind_load.Text = "風阻(N)";
             // 
             // gravity_load
             // 
             this.gravity_load.AutoSize = true;
-            this.gravity_load.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.gravity_load.Location = new System.Drawing.Point(454, 111);
+            this.gravity_load.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.gravity_load.Location = new System.Drawing.Point(480, 76);
             this.gravity_load.Name = "gravity_load";
-            this.gravity_load.Size = new System.Drawing.Size(80, 25);
+            this.gravity_load.Size = new System.Drawing.Size(103, 31);
             this.gravity_load.TabIndex = 41;
             this.gravity_load.Text = "重力(N)";
             // 
             // fraction_load
             // 
             this.fraction_load.AutoSize = true;
-            this.fraction_load.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fraction_load.Location = new System.Drawing.Point(453, 164);
+            this.fraction_load.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.fraction_load.Location = new System.Drawing.Point(481, 123);
             this.fraction_load.Name = "fraction_load";
-            this.fraction_load.Size = new System.Drawing.Size(100, 25);
+            this.fraction_load.Size = new System.Drawing.Size(128, 31);
             this.fraction_load.TabIndex = 42;
             this.fraction_load.Text = "摩擦力(N)";
             // 
             // Torque
             // 
             this.Torque.AutoSize = true;
-            this.Torque.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Torque.Location = new System.Drawing.Point(453, 224);
+            this.Torque.Font = new System.Drawing.Font("微軟正黑體", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Torque.ForeColor = System.Drawing.Color.Blue;
+            this.Torque.Location = new System.Drawing.Point(479, 192);
             this.Torque.Name = "Torque";
-            this.Torque.Size = new System.Drawing.Size(99, 25);
+            this.Torque.Size = new System.Drawing.Size(141, 36);
             this.Torque.TabIndex = 43;
             this.Torque.Text = "扭力(Nm)";
             // 
             // motor_speed
             // 
             this.motor_speed.AutoSize = true;
-            this.motor_speed.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.motor_speed.Location = new System.Drawing.Point(454, 284);
+            this.motor_speed.Font = new System.Drawing.Font("微軟正黑體", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.motor_speed.ForeColor = System.Drawing.Color.Blue;
+            this.motor_speed.Location = new System.Drawing.Point(480, 252);
             this.motor_speed.Name = "motor_speed";
-            this.motor_speed.Size = new System.Drawing.Size(188, 25);
+            this.motor_speed.Size = new System.Drawing.Size(195, 45);
             this.motor_speed.TabIndex = 44;
-            this.motor_speed.Text = "馬達需求轉速(RPM)";
+            this.motor_speed.Text = "轉速(RPM)";
+            // 
+            // Power
+            // 
+            this.Power.AutoSize = true;
+            this.Power.Font = new System.Drawing.Font("微軟正黑體", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Power.ForeColor = System.Drawing.Color.Blue;
+            this.Power.Location = new System.Drawing.Point(480, 313);
+            this.Power.Name = "Power";
+            this.Power.Size = new System.Drawing.Size(150, 45);
+            this.Power.TabIndex = 45;
+            this.Power.Text = "瓦數(W)";
+            this.Power.Click += new System.EventHandler(this.label14_Click_1);
             // 
             // wheel
             // 
@@ -479,6 +495,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(883, 450);
+            this.Controls.Add(this.Power);
             this.Controls.Add(this.motor_speed);
             this.Controls.Add(this.Torque);
             this.Controls.Add(this.fraction_load);
@@ -570,6 +587,7 @@
         private System.Windows.Forms.Label fraction_load;
         private System.Windows.Forms.Label Torque;
         private System.Windows.Forms.Label motor_speed;
+        private System.Windows.Forms.Label Power;
     }
 }
 

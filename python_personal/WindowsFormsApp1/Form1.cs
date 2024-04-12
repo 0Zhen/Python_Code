@@ -8,6 +8,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using 電輔車附載分析.Properties;
 
 namespace WindowsFormsApp1
 {
@@ -46,6 +47,7 @@ namespace WindowsFormsApp1
             public double Torque;
             public double require_rpm;
             public double require_motor_speed;
+            public double power;
         }
 
         input input_info = new input();
@@ -53,7 +55,31 @@ namespace WindowsFormsApp1
         public wheel()
         {
             InitializeComponent();
-            //this.Icon = new Icon("D:\\ChrisLee\\personal\\Chris\\Personal Git\\Code\\python_personal\\WindowsFormsApp1\\Logo_black.ico");
+            this.Icon = Resources.Logo_black;
+            slope_box.Text = "8.1";
+            bikeweight_box.Text = "23";
+            personweight_box.Text = "70";
+            handbarwidth_box.Text = "0.7";
+            hidth_box.Text = "1.7";
+            BikeSpeed_box.Text = "32";
+            air_density_box.Text = "1.17";
+            wind_factor_box.Text = "0.3";
+            wind_area_factor_box.Text = "0.4";
+            friction_factor_box.Text = "0.01";
+            wheelD_box.Text = "29";
+            double.TryParse(slope_box.Text, out input_info.slope);
+            double.TryParse(bikeweight_box.Text, out input_info.bike_weight);
+            double.TryParse(personweight_box.Text, out input_info.person_weight);
+            double.TryParse(handbarwidth_box.Text, out input_info.handbar_width);
+            double.TryParse(hidth_box.Text, out input_info.bike_height);
+            double.TryParse(BikeSpeed_box.Text, out input_info.bike_speed);
+            double.TryParse(air_density_box.Text, out input_info.air_density);
+            double.TryParse(wind_factor_box.Text, out input_info.wind_factor);
+            double.TryParse(wind_area_factor_box.Text, out input_info.wind_area_factor);
+            double.TryParse(friction_factor_box.Text, out input_info.friction_factor);
+            double.TryParse(wheelD_box.Text, out input_info.wheel_diameter);
+            show();
+
         }
         private void show()
         {
@@ -75,12 +101,13 @@ namespace WindowsFormsApp1
             output_info.Torque = output_info.total_N * output_info.wheel_radius;
             output_info.require_motor_speed = input_info.bike_speed / output_info.wheel_diameter_km / 60;
             chris.Text = String.Format("Created by ChrisLee ", "");
-            wind_load.Text = String.Format("風阻力: {0} N", output_info.wind_N.ToString("F2")); 
+            wind_load.Text = String.Format("風阻: {0} N", output_info.wind_N.ToString("F2")); 
             gravity_load.Text = String.Format("重力: {0}N", output_info.gravity_N.ToString("F2"));
             fraction_load.Text = String.Format("摩擦力: {0}N", output_info.friction_N.ToString("F2"));
             Torque.Text = String.Format("扭力: {0}Nm", output_info.Torque.ToString("F2"));
-            motor_speed.Text = String.Format("馬達需求轉速: {0} RPM", output_info.require_motor_speed.ToString("F2"));
-
+            motor_speed.Text = String.Format("轉速: {0} RPM", output_info.require_motor_speed.ToString("F2"));
+            output_info.power = output_info.Torque * output_info.require_motor_speed * 2 * Math.PI / 60;
+            Power.Text = String.Format("瓦數: {0} W", output_info.power.ToString("F2"));
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -278,6 +305,14 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void label14_Click_1(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
