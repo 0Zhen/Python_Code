@@ -331,9 +331,9 @@
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.Location = new System.Drawing.Point(25, 320);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 19);
+            this.label2.Size = new System.Drawing.Size(137, 19);
             this.label2.TabIndex = 32;
-            this.label2.Text = "空氣密度(kg/m^3) ex:1.17";
+            this.label2.Text = "空氣密度(kg/m^3)";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // air_density_box
@@ -361,9 +361,9 @@
             this.label11.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label11.Location = new System.Drawing.Point(122, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 19);
+            this.label11.Size = new System.Drawing.Size(69, 19);
             this.label11.TabIndex = 35;
-            this.label11.Text = "風阻係數 ex: 0.3";
+            this.label11.Text = "風阻係數";
             // 
             // wind_factor_box
             // 
@@ -390,9 +390,9 @@
             this.label17.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label17.Location = new System.Drawing.Point(122, 60);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(146, 19);
+            this.label17.Size = new System.Drawing.Size(99, 19);
             this.label17.TabIndex = 37;
-            this.label17.Text = "迎風面積係數 ex: 0.4";
+            this.label17.Text = "迎風面積係數";
             // 
             // wind_area_factor_box
             // 
@@ -410,9 +410,9 @@
             this.label18.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label18.Location = new System.Drawing.Point(122, 111);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(196, 19);
+            this.label18.Size = new System.Drawing.Size(144, 19);
             this.label18.TabIndex = 39;
-            this.label18.Text = "接觸面滾動摩擦係數 ex:0.01";
+            this.label18.Text = "接觸面滾動摩擦係數";
             this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // friction_factor_box
