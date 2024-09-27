@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電輔車附載分析 - 反向計算</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            max-width: 1200px; 
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        .content {
+            display: flex;
+            gap: 40px;
+        }
+        .input-section {
+            flex: 1;
+        }
+        .results-section {
+            flex: 1;
+        }
+        .input-group { 
+            margin-bottom: 10px; 
+        }
+        label { 
+            display: inline-block; 
+            width: 150px; 
+        }
+        input { 
+            width: 100px; 
+        }
+        #results { 
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEBElEQVR4nO2aW4hVVRjHf5yxUjFrSLIHIdNEqGiKIrTAIoTyoQKfJHoQQ8SXCKIggugpIh+LKJAuRhFZUVGRYDUZlVkTZnbVyBzTmdHsNk2p01mxYf7yrbOdfc6+nH3OOVvnD99lLeZ8/9/Za31rrW9DNdVUUzVVD0wEFgHrgfeAT4AvgK+BvcAvwEHgBHAGOK/PCX3bqzHbNWa9xiaQgWQqcDfwIvAZcEb/aLnpb+AP4H3gMWCMHJ0wLgZmAg8B7wA/Z+CcRbsC9AMbgBsrFTAGWApsA07noNpPHQM2AQuLkJgEPAMcKsBZnnYEeEKuVOhGF+CsHE+ptb2K+7y0BriniHWjC9gpZ2X6EXg8MBsFPK3oEsWUGq9rwCIFibC6XURaqjTHvNUNzA+A8e1F4HIVtyfwa3mQIjNDMZTDyJBZopBol/M5QL2KXbUdq3ndwHSD+HkVuQXApcA1wAzgYWAPcKokhN+0X2nTOpKmjcBwg/jSAESyqE+AfQYZ+5ysqvgGGGsQf6sMi7TT1w/ARwa5zWVYW5ZmRX5X8k1y0TQ3tNcgtz5na2mTjXo6JEQOGgSbPdYPGQSfLUDwXYPgex7rPzIILitAcI1BcJvH+m8Mgit8+j0I3uFrEFwcxMlT9B8Nklf5GLQZJPvc7OVFphPuoGM5GHxukNvoYzDVIPmrrncLEPzQIDfZY/1og+RRX4PxBsm9GbeMeSfXLoNcy1X50BOWDuic5I0fkx3yohaD4GcViNpikDwC3FwGQqMM139gEF0DXFGBkKaAZe8OTYkMhDM8Z8hRgdxX/TmO9C5bLPjZs234uBPpRgGwVycVPcBvGQLPeC+Zt5YHqlcTc30VG9LUaEUe9Jy1hKRLgQsGwV3K7UVqekDnVxqET5K26UrJpzXuVgV33+yN3qiLQWRMBPu5ZUbS1RzIgPsVNI+bfx+5Vl9AD7MnRqcP+Bh4HrhHkWikRKcp4txLdrfQGSgHWlGKLRBeTDG8IuXjLbpTZ4EK3nzVmNHq9K5XULhX3ebJ8UQmq+MzxITyQvCM+zq1lBHV3aR+XwWQKEtIvYS4xuFWBY1y2jRggiaTVNujbRcZWa8J5y/RzQjhX/RsIEhLtmEKJpdGsv+NB5aqoZvmK2ZHSS2ydU9yPKJKH0dMkKLkXhJIXXbVEF0+L+ukY1YGS45T+VXgdR3OXpW4CUlGt3AHZFURqtKGdSBOtlQT9fzkKmCMjgzGqYgO0dFBUkyd+JkaZ5t/R0eI/Vl9Ui9Zq7S6thC3QZXInVZXBvbN/BDda25VjrfFnSVj4KmmmqrVf8C/7JRZH/eLLg0AAAAASUVORK5CYII=" alt="Logo" class="logo">
+        <h1>電輔車附載分析 - 反向計算</h1>
+    </div>
+    <div class="content">
+        <div class="input-section">
+            <div id="inputs">
+                <div class="input-group">
+                    <label for="power">瓦數 (W):</label>
+                    <input type="number" id="power" value="500">
+                </div>
+                <div class="input-group">
+                    <label for="bikeWeight">腳踏車重量 (kg):</label>
+                    <input type="number" id="bikeWeight" value="23">
+                </div>
+                <div class="input-group">
+                    <label for="personWeight">人重 (kg):</label>
+                    <input type="number" id="personWeight" value="70">
+                </div>
+                <div class="input-group">
+                    <label for="handbarWidth">把手寬度 (m):</label>
+                    <input type="number" id="handbarWidth" value="0.7">
+                </div>
+                <div class="input-group">
+                    <label for="bikeHeight">腳踏車高度 (m):</label>
+                    <input type="number" id="bikeHeight" value="1.7">
+                </div>
+                <div class="input-group">
+                    <label for="bikeSpeed">腳踏車速度 (km/h):</label>
+                    <input type="number" id="bikeSpeed" value="32">
+                </div>
+                <div class="input-group">
+                    <label for="airDensity">空氣密度 (kg/m³):</label>
+                    <input type="number" id="airDensity" value="1.17">
+                </div>
+                <div class="input-group">
+                    <label for="windFactor">風阻係數:</label>
+                    <input type="number" id="windFactor" value="0.3">
+                </div>
+                <div class="input-group">
+                    <label for="windAreaFactor">風阻面積係數:</label>
+                    <input type="number" id="windAreaFactor" value="0.4">
+                </div>
+                <div class="input-group">
+                    <label for="frictionFactor">摩擦係數:</label>
+                    <input type="number" id="frictionFactor" value="0.01">
+                </div>
+                <div class="input-group">
+                    <label for="wheelDiameter">輪胎直徑 (inch):</label>
+                    <input type="number" id="wheelDiameter" value="29">
+                </div>
+            </div>
+        </div>
+        <div class="results-section">
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            const input = {
+                power: parseFloat(document.getElementById('power').value),
+                bikeWeight: parseFloat(document.getElementById('bikeWeight').value),
+                personWeight: parseFloat(document.getElementById('personWeight').value),
+                handbarWidth: parseFloat(document.getElementById('handbarWidth').value),
+                bikeHeight: parseFloat(document.getElementById('bikeHeight').value),
+                bikeSpeed: parseFloat(document.getElementById('bikeSpeed').value),
+                airDensity: parseFloat(document.getElementById('airDensity').value),
+                windFactor: parseFloat(document.getElementById('windFactor').value),
+                windAreaFactor: parseFloat(document.getElementById('windAreaFactor').value),
+                frictionFactor: parseFloat(document.getElementById('frictionFactor').value),
+                wheelDiameter: parseFloat(document.getElementById('wheelDiameter').value)
+            };
+
+            const output = {};
+
+            // 固定參數計算
+            output.wheelRadius = input.wheelDiameter * ((25.4 / 2) / 1000);
+            output.wheelDiameterKm = output.wheelRadius * 2 * Math.PI / 1000;
+            output.totalWeight = input.bikeWeight + input.personWeight;
+            output.gravity = 9.8;
+            output.area = input.handbarWidth * input.bikeHeight * input.windAreaFactor;
+            output.bikeSpeedMs = input.bikeSpeed * 1000 / 60 / 60;
+
+            // 二分法求解坡度
+            function calculatePower(slope) {
+                const angle = Math.atan(slope / 100);
+                const windN = 0.5 * output.area * input.airDensity * Math.pow(output.bikeSpeedMs, 2) * input.windFactor;
+                const gravityN = output.totalWeight * output.gravity * Math.sin(angle);
+                const frictionN = input.frictionFactor * output.totalWeight * output.gravity * Math.cos(angle);
+                const totalN = windN + gravityN + frictionN;
+                const torque = totalN * output.wheelRadius;
+                const requireMotorSpeed = input.bikeSpeed / output.wheelDiameterKm / 60;
+                return torque * requireMotorSpeed * 2 * Math.PI / 60;
+            }
+
+            let lowSlope = 0;
+            let highSlope = 100;
+            let midSlope, calculatedPower;
+
+            while (highSlope - lowSlope > 0.0001) {
+                midSlope = (lowSlope + highSlope) / 2;
+                calculatedPower = calculatePower(midSlope);
+                if (calculatedPower < input.power) {
+                    lowSlope = midSlope;
+                } else {
+                    highSlope = midSlope;
+                }
+            }
+
+            output.slope = midSlope;
+            output.angle = Math.atan(output.slope / 100);
+            output.windN = 0.5 * output.area * input.airDensity * Math.pow(output.bikeSpeedMs, 2) * input.windFactor;
+            output.gravityN = output.totalWeight * output.gravity * Math.sin(output.angle);
+            output.frictionN = input.frictionFactor * output.totalWeight * output.gravity * Math.cos(output.angle);
+            output.totalN = output.windN + output.gravityN + output.frictionN;
+            output.torque = output.totalN * output.wheelRadius;
+            output.requireMotorSpeed = input.bikeSpeed / output.wheelDiameterKm / 60;
+
+            // 顯示結果
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <h2>計算結果</h2>
+                <p>坡度: ${output.slope.toFixed(2)} %</p>
+                <p>風阻: ${output.windN.toFixed(2)} N</p>
+                <p>重力: ${output.gravityN.toFixed(2)} N</p>
+                <p>摩擦力: ${output.frictionN.toFixed(2)} N</p>
+                <p>扭力: ${output.torque.toFixed(2)} Nm</p>
+                <p>轉速: ${output.requireMotorSpeed.toFixed(2)} RPM</p>
+            `;
+        }
+
+        // 為所有輸入欄位添加事件監聽器
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', calculate);
+        });
+
+        // 頁面加載時進行初始計算
+        calculate();
+    </script>
+</body>
+</html>
