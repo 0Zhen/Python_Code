@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19515a13-5a9b-4b77-9600-12aced0074f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Bitcoin Annualized Volatility Calculator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bitcoin Loan Risk Calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C/persomal_test/.vs/persomal_test/FileContentIndex/c2fb9547-ec0f-4b79-b389-a3f8efe4e41d.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/C/persomal_test/.vs/persomal_test/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/C/persomal_test/.vs/persomal_test/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_personal/WindowsFormsApp1/.vs/WindowsFormsApp1/FileContentIndex/082108b3-b406-45b3-afcb-18730cb4b072.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_personal/WindowsFormsApp1/.vs/WindowsFormsApp1/FileContentIndex/18e175f9-ee28-44f4-bc42-ecebae3e1641.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_personal/WindowsFormsApp1/.vs/WindowsFormsApp1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/python_personal/WindowsFormsApp1/.vs/WindowsFormsApp1/v17/.suo" afterDir="false" />
-    </list>
+    <list default="true" id="19515a13-5a9b-4b77-9600-12aced0074f4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
