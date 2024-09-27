@@ -48,16 +48,36 @@ def ROI_calculate(input_type: ROI, output_type: ROI, roi: float) -> float:
 start_date = datetime.now().replace(day=1)
 date_range = [start_date + timedelta(days=30*i) for i in range(Year*12)]
 Crypto_assets = []
+Stock_assests = []
+Bank_assests = []
+Total_assests = []
 Crypto_monthly_roi = float(ROI_calculate(ROI.AnnualROI,ROI.MonthROI,Crypto_annual_roi))
-print("month_roi=",Crypto_monthly_roi)
-temp = 0
+Stock_monthly_roi = float(ROI_calculate(ROI.AnnualROI, ROI.MonthROI,Stock_annual_roi))
+Bank_monthly_roi = float(ROI_calculate(ROI.AnnualROI,ROI.MonthROI,Bank_annual_roi))
+Crytpo_temp = 0
+Stock_temp = 0
+Bank_temp = 0
+Total_assests_temp = 0
+
 for i in range(Year*12):
-    temp = temp*(1+Crypto_monthly_roi) + Crypto_monthly_investment
-    Crypto_assets.append(f"{temp:.{2}f}")
+    Crytpo_temp = Crytpo_temp*(1+Crypto_monthly_roi) + Crypto_monthly_investment
+    Crypto_assets.append(f"{Crytpo_temp:.{2}f}")
+
+    Stock_temp = Stock_temp*(1+Stock_monthly_roi) + Stock_monthly_investment
+    Stock_assests.append(f"{Stock_temp:.{2}f}")
+
+    Bank_temp = Bank_temp *(1 + Bank_monthly_roi) + Bank_monthly_saving
+    Bank_assests.append(f"{Bank_temp:.{2}f}")
+
+    Total_temp = Crytpo_temp+Stock_temp+Bank_temp
+    Total_assests.append(f"{Total_temp:.{2}f}")
 
 df = pd.DataFrame({
     'Date':date_range,
-    'Crypto':Crypto_assets
+    'Crypto':Crypto_assets,
+    'Stock':Stock_assests,
+    'Bank':Bank_assests,
+    'Total_assests':Total_assests
 })
 # 將 'Date' 列轉換為只包含年份和月份
 df['Date'] = df['Date'].dt.to_period('M')
@@ -73,38 +93,7 @@ print(df.tail())
 print("\nBasic Statistics:")
 print(df.describe())
 df['Crypto'] = df['Crypto'].astype(float)
-'''
-# 繪製資金增長圖表
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
 
-plt.figure(figsize=(12, 6))
-# 將索引轉換為 datetime 對象
-df.index = df.index.to_timestamp()
-plt.plot(df.index,  df['Crypto'])
-plt.title('Crypto Growth Over 2 Year')
-plt.xlabel('Year')
-plt.ylabel('Crypto Amount')
-plt.grid(True)
-
-# 設置 x 軸刻度為每5年一個
-years = mdates.YearLocator(1)  # 每5年一個刻度
-years_fmt = mdates.DateFormatter('%Y')
-plt.gca().xaxis.set_major_locator(years)
-plt.gca().xaxis.set_major_formatter(years_fmt)
-
-# 旋轉並對齊 x 軸標籤
-plt.gcf().autofmt_xdate()
-# 设置 y 轴的刻度
-y_min = 0
-print(df['Crypto'].max())
-y_max = df['Crypto'].max() * 1.1  # 给最大值留一些空间
-y_interval = 10000000  # 设置固定间隔
-y_ticks = np.arange(y_min, y_max, y_interval)
-plt.yticks(y_ticks, [f'${y:,.0f}' for y in y_ticks])
-plt.tight_layout()
-plt.show()
-'''
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 
@@ -120,6 +109,21 @@ fig.add_trace(
     secondary_y=False,
 )
 
+fig.add_trace(
+    go.Scatter(x=df.index, y=df['Stock'], name="Stock Value"),
+    secondary_y=False,
+)
+
+fig.add_trace(
+    go.Scatter(x=df.index, y=df['Bank'], name="Bank Value"),
+    secondary_y=False,
+)
+
+fig.add_trace(
+    go.Scatter(x=df.index, y=df['Total_assests'], name="Total Value"),
+    secondary_y=False,
+)
+
 # 設置 x 軸
 fig.update_xaxes(
     title_text="Year",
@@ -129,7 +133,7 @@ fig.update_xaxes(
 
 # 設置 y 軸
 fig.update_yaxes(
-    title_text="Crypto Amount ($)",
+    title_text="Assets Amount ($)",
     secondary_y=False,
     tickformat="$,.0f",
     hoverformat="$,.2f"
@@ -137,7 +141,7 @@ fig.update_yaxes(
 
 # 更新布局
 fig.update_layout(
-    title_text="Crypto Growth Over %d Years"%Year,
+    title_text="Assets Growth Over %d Years"%Year,
     hovermode="x unified",
     legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
 )
