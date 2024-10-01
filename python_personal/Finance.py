@@ -6,17 +6,20 @@ from datetime import datetime, timedelta
 Total_salary = 63000
 Fixed_expenses = 10000
 CTBC = 15000
-Total_investment = Total_salary - Fixed_expenses - CTBC
 Stock_invest_ratio = 0.25
 Crypto_invest_ratio = 0.65
+Year = 2
+
+Crypto_annual_roi = 0.1
+Stock_annual_roi = 0.06
+Bank_annual_roi = 0.0083
+yaxis_uint = 10000000
+
+Total_investment = Total_salary - Fixed_expenses - CTBC
 Bank_saving_ratio = 1 - Stock_invest_ratio - Crypto_invest_ratio
-Year = 20
 Stock_monthly_investment = Total_investment * Stock_invest_ratio
 Crypto_monthly_investment = Total_investment * Crypto_invest_ratio
 Bank_monthly_saving = Total_investment * Bank_saving_ratio
-Crypto_annual_roi = 0.06
-Stock_annual_roi = 0.06
-Bank_annual_roi = 0.0083
 class ROI(Enum):
     AnnualROI = 0
     MonthROI = 1
@@ -61,16 +64,16 @@ Total_assests_temp = 0
 
 for i in range(Year*12):
     Crytpo_temp = Crytpo_temp*(1+Crypto_monthly_roi) + Crypto_monthly_investment
-    Crypto_assets.append(f"{Crytpo_temp:.{2}f}")
+    Crypto_assets.append(f"{Crytpo_temp:.{0}f}")
 
     Stock_temp = Stock_temp*(1+Stock_monthly_roi) + Stock_monthly_investment
-    Stock_assests.append(f"{Stock_temp:.{2}f}")
+    Stock_assests.append(f"{Stock_temp:.{0}f}")
 
     Bank_temp = Bank_temp *(1 + Bank_monthly_roi) + Bank_monthly_saving
-    Bank_assests.append(f"{Bank_temp:.{2}f}")
+    Bank_assests.append(f"{Bank_temp:.{0}f}")
 
     Total_temp = Crytpo_temp+Stock_temp+Bank_temp
-    Total_assests.append(f"{Total_temp:.{2}f}")
+    Total_assests.append(f"{Total_temp:.{0}f}")
 
 df = pd.DataFrame({
     'Date':date_range,
@@ -92,7 +95,12 @@ print(df.tail())
 # 基本統計信息
 print("\nBasic Statistics:")
 print(df.describe())
+
 df['Crypto'] = df['Crypto'].astype(float)
+df['Stock'] = df['Stock'].astype(float)
+df['Bank'] = df['Bank'].astype(float)
+df['Total_assests'] = df['Total_assests'].astype(float)
+
 
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
@@ -105,17 +113,17 @@ fig = make_subplots(specs=[[{"secondary_y": True}]])
 
 # 添加 Crypto 曲線
 fig.add_trace(
-    go.Scatter(x=df.index, y=df['Crypto'], name="Crypto Value"),
+    go.Scatter(x=df.index, y=df['Crypto'], name=f"Crypto Value, Annual ROI={Crypto_annual_roi:.2%}"),
     secondary_y=False,
 )
 
 fig.add_trace(
-    go.Scatter(x=df.index, y=df['Stock'], name="Stock Value"),
+    go.Scatter(x=df.index, y=df['Stock'], name=f"Stock Value, Annual ROI={Stock_annual_roi:.2%}"),
     secondary_y=False,
 )
 
 fig.add_trace(
-    go.Scatter(x=df.index, y=df['Bank'], name="Bank Value"),
+    go.Scatter(x=df.index, y=df['Bank'], name=f"Bank Value, Annual ROI={Bank_annual_roi:.2%}"),
     secondary_y=False,
 )
 
@@ -135,8 +143,9 @@ fig.update_xaxes(
 fig.update_yaxes(
     title_text="Assets Amount ($)",
     secondary_y=False,
-    tickformat="$,.0f",
-    hoverformat="$,.2f"
+    dtick=yaxis_uint,
+    tickformat="$d",#"$,.0f",
+    hoverformat="$d"#"$,.2f"
 )
 
 # 更新布局
