@@ -1,0 +1,1218 @@
+\etable{
+    name={Torque Sensor Voltage Abnormal},
+    code={12},
+    type={\error},
+    pedal={\off},
+    motion={\on},
+    throttle={\on},
+    category={torque sensor},
+    hradangerlevel={low},
+    description={Torque sensor voltage is too high or too low.},
+    triggerconditioncode={The torque sensor voltage exceeds the protection value and is triggered by the torque sensor configuration parameters.}
+}
+
+
+\etable{
+    name={Torque Rpm Abnormal},
+    code={14},
+    type={\error},
+    pedal={\off},
+    motion={\on},
+    throttle={\on},
+    category={torque sensor},
+    hradangerlevel={low},
+    description={Torque RPM abnormal},
+    triggerconditioncode={There are too many differences between Torque cadence1 RPM and cadence2 RPM.}
+}
+
+
+\etable{
+    name={Torque Sensor Temperature Too High},
+    code={15},
+    type={\error},
+    pedal={other},
+    motion={\on},
+    throttle={\on},
+    category={torque sensor},
+    hradangerlevel={low},
+    description={Torque sensor temperature too high},
+    triggerconditioncode={The temperature of the torque sensor is higher than the parameter protection temperature.}
+}
+
+
+\etable{
+    name={Torque Sensor Signal Error},
+    code={16},
+    type={\error},
+    pedal={\off},
+    motion={\on},
+    throttle={\on},
+    category={torque sensor},
+    hradangerlevel={low},
+    description={The detected output voltage of the torque sensor is too high, indicating potential sensor damage.},
+    triggerconditioncode={Torque voltage gt 4V, continue 500ms}
+}
+
+
+\etable{
+    name={Torque Sensor Signal Error},
+    code={17},
+    type={\error},
+    pedal={\off},
+    motion={\on},
+    throttle={\on},
+    category={torque sensor},
+    hradangerlevel={low},
+    description={The detected torque sensor output voltage is too low, indicating that the connection between the sensor and controller may be broken or damaged.},
+    triggerconditioncode={Torque voltage lt 0.5V, continue 500ms}
+}
+
+
+\etable{
+    name={Motor Signal Error},
+    code={32},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={motor},
+    hradangerlevel={low},
+    description={Motor hall signal abnormality detected all high.},
+    triggerconditioncode={Hall UampampVampampW 1, continue 500ms}
+}
+
+
+\etable{
+    name={Motor Signal Error},
+    code={33},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={motor},
+    hradangerlevel={low},
+    description={Motor hall signal abnormality detected all low.},
+    triggerconditioncode={Hall UampVampW 0, continue 500ms}
+}
+
+
+\etable{
+    name={Motor Signal Error U},
+    code={34},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={motor},
+    hradangerlevel={low},
+    description={Motor U phase hall sensor signal abnormality detected.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Motor Signal Error V},
+    code={35},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={motor},
+    hradangerlevel={low},
+    description={Motor V phase hall sensor signal abnormality detected.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Motor Signal Error W},
+    code={36},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={motor},
+    hradangerlevel={low},
+    description={Motor W phase hall sensor signal abnormality detected.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Motor Malfunction U},
+    code={37},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={motor},
+    hradangerlevel={low},
+    description={Motor U phase short circuit detected.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Motor Malfunction V},
+    code={38},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={motor},
+    hradangerlevel={low},
+    description={Motor V phase short circuit detected.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Motor Malfunction W},
+    code={39},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={motor},
+    hradangerlevel={low},
+    description={Motor W phase short circuit detected.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Motor Overheat},
+    code={40},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={motor},
+    hradangerlevel={low},
+    description={Motor temperature detected as excessively high.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Hall Signal Abnormality},
+    code={41},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={motor},
+    hradangerlevel={low},
+    description={hall signal all high or all low},
+    triggerconditioncode={hall signal all high or all low}
+}
+
+
+\etable{
+    name={Speed Sensor Error},
+    code={48},
+    type={\error},
+    pedal={other},
+    motion={\on},
+    throttle={other},
+    category={speed sensor},
+    hradangerlevel={low},
+    description={Speed sensor signal missing, possibly due to sensor damage or a broken connection.},
+    triggerconditioncode={Motor speed gt Wheel speed 5.5kmh continue 6 sec}
+}
+
+
+\etable{
+    name={Cadence Sensor Error},
+    code={49},
+    type={\error},
+    pedal={\off},
+    motion={\on},
+    throttle={\on},
+    category={cadence sensor},
+    hradangerlevel={low},
+    description={Cadence sensor signal missing, possibly due to sensor damage or a broken connection.},
+    triggerconditioncode={Bike speed gt 10kmh and torque voltage lt 150mV}
+}
+
+
+\etable{
+    name={Drivetrain Error},
+    code={50},
+    type={\error},
+    pedal={\off},
+    motion={\on},
+    throttle={\on},
+    category={chain},
+    hradangerlevel={low},
+    description={Drivetrain sensing value abnormal chain possibly off sprockets.},
+    triggerconditioncode={Bike speed lt 5kmhstartup and cadence speed difference gt 50 rpm}
+}
+
+
+\etable{
+    name={Horn Over Current Protection},
+    code={56},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={misc},
+    hradangerlevel={low},
+    description={Horn active current over the protection},
+    triggerconditioncode={Horn active current over the protection value, Initiated by parameter of Bike light config detected by controller}
+}
+
+
+\etable{
+    name={Battery Overvoltage},
+    code={64},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={The battery voltage exceeds the normal value.},
+    triggerconditioncode={Voltage gt 45.0V, continue 10sec}
+}
+
+
+\etable{
+    name={Battery Undervoltage},
+    code={65},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={The battery voltage drops below the normal value.},
+    triggerconditioncode={Voltage lt 26.0V, continue 10sec}
+}
+
+
+\etable{
+    name={Low Capacity},
+    code={66},
+    type={\error},
+    pedal={\off},
+    motion={\on},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={The battery charge capacity is near empty charge the battery as soon as possible.},
+    triggerconditioncode={RSOC LOW capacity continue 10secLOW capacity is set from CONTROLLER parameter}
+}
+
+
+\etable{
+    name={Empty Capacity},
+    code={67},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={The battery charge capacity is empty charge the battery immediately.},
+    triggerconditioncode={RSOC EMPTY capacity continue 10secEMPTY capacity is set from CONTROLLER parameter}
+}
+
+
+\etable{
+    name={Charging Temperature Error},
+    code={68},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={Battery temperature during charging exceeds or falls below the normal range.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Battery Cell Overvoltage},
+    code={69},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={The detected battery cell voltage exceeds the normal value.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Battery Cell Undervoltage},
+    code={70},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={The detected battery cell voltage falls below the normal value.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Battery Overcharge},
+    code={71},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={The battery has malfunctioned due to overcharging.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Battery Short Circuit},
+    code={72},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={The battery has malfunctioned due to a short circuit.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Battery Overdischarge},
+    code={73},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={The battery has malfunctioned due to overdischarging.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Discharging Temperature Error},
+    code={74},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={Battery temperature during discharging exceeds or falls below the normal range.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Battery Cell Balancing Error},
+    code={75},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={Imbalanced battery cell voltages detected.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Controller Overheat},
+    code={80},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={Controller temperature detected as excessively high.},
+    triggerconditioncode={Driver temperature 100 continue 1.99 sec.}
+}
+
+
+\etable{
+    name={Battery Communication Failure},
+    code={81},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\on},
+    category={controller},
+    hradangerlevel={low},
+    description={System communication with the battery is interrupted due to a possible connection issue between the battery and controller.},
+    triggerconditioncode={No battery communication was received for five consecutive seconds.}
+}
+
+
+\etable{
+    name={Locked Rotor Pedal Assist},
+    code={82},
+    type={\error},
+    pedal={\off},
+    motion={\on},
+    throttle={\on},
+    category={controller},
+    hradangerlevel={low},
+    description={System overload in pedal assist mode causing a stall.},
+    triggerconditioncode={Motor current gt 0.85 maximum assist current and Motor speed lt 3kmh continue 2.9 sec.}
+}
+
+
+\etable{
+    name={Locked Rotor Walk Assist},
+    code={83},
+    type={\error},
+    pedal={\on},
+    motion={\off},
+    throttle={\on},
+    category={controller},
+    hradangerlevel={low},
+    description={System overload in walk assist mode causing a stall.},
+    triggerconditioncode={Motor current gt 5A and Motor speed lt 3kmh continue 2.9 sec}
+}
+
+
+\etable{
+    name={Controller Communication Failure},
+    code={84},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={controller},
+    hradangerlevel={low},
+    description={System communication with the controller is interrupted due to a possible connection issue between parts.},
+    triggerconditioncode={No driver communication received for five consecutive seconds}
+}
+
+
+\etable{
+    name={Controller Fet Error U},
+    code={85},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={Controller high side FET phase U malfunction detected controller drive components may be open circuit or faulty.},
+    triggerconditioncode={NA}
+}
+
+
+\etable{
+    name={Controller Fet Error U},
+    code={86},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={Controller low side FET phase U malfunction detected controller drive components may be open circuit or faulty.},
+    triggerconditioncode={NA}
+}
+
+
+\etable{
+    name={Controller Fet Error V},
+    code={87},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={Controller high side FET phase V malfunction detected controller drive components may be open circuit or faulty.},
+    triggerconditioncode={NA}
+}
+
+
+\etable{
+    name={Controller Fet Error V},
+    code={88},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={Controller low side FET phase V malfunction detected controller drive components may be open circuit or faulty.},
+    triggerconditioncode={NA}
+}
+
+
+\etable{
+    name={Controller Fet Error W},
+    code={89},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={Controller high side FET phase W malfunction detected controller drive components may be open circuit or faulty.},
+    triggerconditioncode={NA}
+}
+
+
+\etable{
+    name={Controller Fet Error W},
+    code={90},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={Controller low side FET phase W malfunction detected controller drive components may be open circuit or faulty.},
+    triggerconditioncode={NA}
+}
+
+
+\etable{
+    name={Controller Fet Circuit Error},
+    code={91},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={Controller FET detection circuit malfunction detected controller drive components may be open circuit or faulty.},
+    triggerconditioncode={NA}
+}
+
+
+\etable{
+    name={Controller Overcurrent Fw},
+    code={92},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={The output power of the controller has exceeded the firmware protection value.},
+    triggerconditioncode={Peak motor current ampampgt MAX current continue 0.1 secMAX current is set from CONTROLLER parameter}
+}
+
+
+\etable{
+    name={Controller Overcurrent Hw},
+    code={93},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={The output power of the controller has exceeded the hardware protection value or the controller is shortcircuited.},
+    triggerconditioncode={Peak motor current ampampgt MAX peak currentMAX peak current is configured by CONTROLLER hardware}
+}
+
+
+\etable{
+    name={Controller Protection Unit Error},
+    code={94},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={The controller protection unit watchdog abnormality is detected.},
+    triggerconditioncode={The CONTROLLER watchdog reset}
+}
+
+
+\etable{
+    name={Locked Rotor Throttle},
+    code={95},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\off},
+    category={controller},
+    hradangerlevel={low},
+    description={System overload in throttle assist mode causing a stall.},
+    triggerconditioncode={Motor current gt 15A and Motor speed lt 3kmh continue 2.9 sec}
+}
+
+
+\etable{
+    name={Throttle Overvoltage},
+    code={96},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\off},
+    category={throttle},
+    hradangerlevel={low},
+    description={The throttle output voltage exceeds the normal value.},
+    triggerconditioncode={Throttle voltage gt 2.4V continue 0.5 sec}
+}
+
+
+\etable{
+    name={Throttle Undervoltage},
+    code={97},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\off},
+    category={throttle},
+    hradangerlevel={low},
+    description={The throttle output voltage falls below the normal value.},
+    triggerconditioncode={Throttle voltage lt 0.5V continue 0.5 sec}
+}
+
+
+\etable{
+    name={Hmi Button Blocked},
+    code={98},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={hmi},
+    hradangerlevel={low},
+    description={The button unit signal is missing, the HMI button may be damaged or the connection may be broken.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Hmi Button Communication Error},
+    code={99},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={hmi},
+    hradangerlevel={low},
+    description={System communication with the HMI button is interrupted due to a possible connection issue between the HMI and controller.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Display Panel Malfunction},
+    code={100},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\on},
+    category={hmi},
+    hradangerlevel={low},
+    description={The display panel malfunction is detected, the HMI display panel may be damaged or the connection may be broken.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Usb Charge Port Error},
+    code={101},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\on},
+    category={hmi},
+    hradangerlevel={low},
+    description={The USB charging port output current is abnormal.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Front Light Malfunction},
+    code={112},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\on},
+    category={front light},
+    hradangerlevel={low},
+    description={The front light malfunction is detected, the light may be damaged or the connection may be broken.},
+    triggerconditioncode={Head light over specification current}
+}
+
+
+\etable{
+    name={Maintenance Notification},
+    code={113},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\on},
+    category={misc},
+    hradangerlevel={low},
+    description={The ebike has reached the preset maintenance mileage. Reset or disable the next maintenance notification at the bike shop.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Bluetooth Error},
+    code={114},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\on},
+    category={misc},
+    hradangerlevel={low},
+    description={EBike Bluetooth malfunction detected, preventing communication with external devices.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Brake Sensor Error},
+    code={115},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\on},
+    category={brake sensor},
+    hradangerlevel={low},
+    description={The brake sensor signal is missing, the sensor may be damaged or the connection may be broken.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Rear Light Malfunction},
+    code={116},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\on},
+    category={rear light},
+    hradangerlevel={low},
+    description={The rear light malfunction is detected, the light may be damaged or the connection may be broken.},
+    triggerconditioncode={Tail light over specification current}
+}
+
+
+\etable{
+    name={Light Short Circuit},
+    code={117},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={light},
+    hradangerlevel={low},
+    description={Light Short Circuit},
+    triggerconditioncode={Light current over 6A}
+}
+
+
+\etable{
+    name={Electronic Derailleur Malfunction},
+    code={118},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={misc},
+    hradangerlevel={low},
+    description={electronic derailleur active current over the protection},
+    triggerconditioncode={Horn active current over the protection value, Initiated by parameter of Efuse cfg detected by controller}
+}
+
+
+\etable{
+    name={Low Capacity},
+    code={119},
+    type={\error},
+    pedal={\on},
+    motion={\on},
+    throttle={\on},
+    category={battery},
+    hradangerlevel={low},
+    description={The battery is about to enter a low battery state},
+    triggerconditioncode={RSOC LOW capacity continue 10sec}
+}
+
+
+\etable{
+    name={Empty Capacity},
+    code={120},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={low},
+    description={The battery is in low battery state},
+    triggerconditioncode={RSOC 5}
+}
+
+
+\etable{
+    name={Low Capacity},
+    code={121},
+    type={\error},
+    pedal={\off},
+    motion={\on},
+    throttle={\off},
+    category={range extender battery},
+    hradangerlevel={low},
+    description={The battery charge capacity is near empty charge the battery as soon as possible.},
+    triggerconditioncode={Battery RSOC lower than 10}
+}
+
+
+\etable{
+    name={Empty Capacity},
+    code={122},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={range extender battery},
+    hradangerlevel={low},
+    description={The battery is in low battery state},
+    triggerconditioncode={RSOC lt 5}
+}
+
+
+\etable{
+    name={Battery Cell Overvoltage},
+    code={123},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={range extender battery},
+    hradangerlevel={low},
+    description={The detected battery cell voltage exceeds the normal value.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Battery Cell Undervoltage},
+    code={124},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={range extender battery},
+    hradangerlevel={low},
+    description={The detected battery cell voltage falls below the normal value.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Battery Short Circuit},
+    code={125},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={range extender battery},
+    hradangerlevel={low},
+    description={The battery has malfunctioned due to a short circuit.},
+    triggerconditioncode={nan}
+}
+
+
+\etable{
+    name={Discharging Temperature Error},
+    code={126},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={range extender battery},
+    hradangerlevel={low},
+    description={Battery temperature during discharging exceeds or falls below the normal range.},
+    triggerconditioncode={NA}
+}
+
+
+\etable{
+    name={Charging Temperature Error},
+    code={127},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={range extender battery},
+    hradangerlevel={low},
+    description={Battery temperature during charging exceeds or falls below the normal range.},
+    triggerconditioncode={NA}
+}
+
+
+\etable{
+    name={Battery Cell Balancing Error},
+    code={128},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={range extender battery},
+    hradangerlevel={low},
+    description={Imbalanced battery cell voltages detected.},
+    triggerconditioncode={NA}
+}
+
+
+\etable{
+    name={Dual Battery Communication Failure},
+    code={129},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={low},
+    description={Dual battery mode has been activated, but the extender batterys communication with the system is interrupted, possibly due to a connection issue.},
+    triggerconditioncode={No battery 2 communication was received for five consecutive seconds.}
+}
+
+
+\etable{
+    name={Battery First Slave No Communication},
+    code={130},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={low},
+    description={The master battery physically detects the first slave battery but does not receive communication from it.},
+    triggerconditioncode={The master battery is in run mode and has detected the physical connection of the first slave battery, but then fails to complete the information exchange with the first slave battery within 100ms. 100ms}
+}
+
+
+\etable{
+    name={Battery First Slave Session Loss},
+    code={131},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={low},
+    description={The information exchange connection between the master battery and the slave battery has been lost.},
+    triggerconditioncode={After establishing the information exchange connection, the master battery does not receive an information update from the first slave battery within 30 seconds. 30 sec}
+}
+
+
+\etable{
+    name={Dual Battery Switching Timeout},
+    code={132},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={medium},
+    description={The exchange of charging or discharging between two batteries has timed out.},
+    triggerconditioncode={During the execution of a charging or discharging exchange process, the master battery failed to confirm the completion of the current step within 500 ms. 500 ms}
+}
+
+
+\etable{
+    name={Main Battery Communication Failure},
+    code={133},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={medium},
+    description={The communication from the extender to the main battery has interrupted.},
+    triggerconditioncode={The control command initiated by the master battery for the first slave battery failed to complete within 400 ms. 400ms}
+}
+
+
+\etable{
+    name={Dual Battery Connected Main Battery Detected},
+    code={134},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={low},
+    description={The extender battery has detected the establishment of dual battery mode, charging or discharging will be temporarily halted for safety.},
+    triggerconditioncode={If the master battery is in run mode and had not previously detected the first slave battery, but then detects the physical connection of the first slave battery.}
+}
+
+
+\etable{
+    name={Dual Battery Disconnected Main Battery Detached},
+    code={135},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={low},
+    description={The extender battery has detected the disconnection of dual battery mode, charging or discharging will be temporarily halted for safety.},
+    triggerconditioncode={If the master battery is in run mode and had previously detected the first slave battery, but then detects the physical disconnection of the first slave battery.}
+}
+
+
+\etable{
+    name={Dual Battery Discharge Failure},
+    code={136},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={low},
+    description={No battery is capable of discharging in dual battery mode.},
+    triggerconditioncode={After the master battery receives a signal to start the system, no battery in the subsystem is capable of discharging.}
+}
+
+
+\etable{
+    name={Dual Battery Charge Failure},
+    code={137},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={low},
+    description={No battery is capable of charging in dual battery mode.},
+    triggerconditioncode={After the master battery receives a signal to start the system, no battery in the subsystem is capable of Charging.}
+}
+
+
+\etable{
+    name={Main Battery Physical Signal Failure},
+    code={138},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={medium},
+    description={The physical detection signal from the extender battery to the main battery has been interrupted, indicating potential hardware malfunction.},
+    triggerconditioncode={The master battery is in run mode and, 100ms after receiving communication from the first slave battery, still has not detected the first slave battery from the physical signal. 100ms}
+}
+
+
+\etable{
+    name={Battery Master No Communication},
+    code={139},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={low},
+    description={The slave battery physically detects the master battery but does not receive communication from it.},
+    triggerconditioncode={The slave battery is in run mode and has detected the physical connection of the master battery, but then fails to complete the information exchange with the master battery within 10 sec. 100ms}
+}
+
+
+\etable{
+    name={Dual Battery Connected Extender Detected},
+    code={142},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={medium},
+    description={The extender battery has detected the establishment of dual battery mode, charging or discharging will be temporarily halted for safety.},
+    triggerconditioncode={If the slave battery is in run mode and had not previously detected the master battery, but then detects the physical connection of the master battery.}
+}
+
+
+\etable{
+    name={Dual Battery Disconnected Extender Detached},
+    code={143},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={medium},
+    description={The extender battery has detected the disconnection of dual battery mode, charging or discharging will be temporarily halted for safety.},
+    triggerconditioncode={If the slave battery is in run mode and had previously detected the master battery, but then detects the physical disconnection of the master battery.}
+}
+
+
+\etable{
+    name={Extender Battery Physical Signal Failure},
+    code={144},
+    type={\error},
+    pedal={\NA},
+    motion={\NA},
+    throttle={\NA},
+    category={battery},
+    hradangerlevel={medium},
+    description={The physical detection signal from the main battery to the extender battery has been interrupted, indicating potential hardware malfunction.},
+    triggerconditioncode={The slave battery is in run mode and, 100ms after receiving communication from the master battery, still has not detected the master battery from the physical signal. 100ms}
+}
+
+
+\etable{
+    name={Thermal Control Mode Motorbattery},
+    code={159},
+    type={\error},
+    pedal={other},
+    motion={other},
+    throttle={other},
+    category={controller},
+    hradangerlevel={low},
+    description={MotorBattery high heating detected. System enabling power control to prevent overheating.},
+    triggerconditioncode={Decrease system output as required for battery or motor power reduction demands.}
+}
+
+
+\etable{
+    name={Thermal Control Mode Controller},
+    code={160},
+    type={\error},
+    pedal={other},
+    motion={other},
+    throttle={other},
+    category={controller},
+    hradangerlevel={low},
+    description={Controller high heating detected. System enabling power control to prevent overheating.},
+    triggerconditioncode={For the purpose of controlling the internal temperature of the controller, the controller enters thermal control mode and decreases the output.}
+}
+
+
+\etable{
+    name={Charger Battery Under Temperature Protection},
+    code={161},
+    type={\error},
+    pedal={\off},
+    motion={\off},
+    throttle={\off},
+    category={battery},
+    hradangerlevel={high},
+    description={Battery under temperature protection initiated by the charger},
+    triggerconditioncode={Battery temperature under the protection value, which trigger the charger initiate error code}
+}
+
+
