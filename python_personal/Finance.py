@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from enum import Enum
 from datetime import datetime, timedelta
+import plotly.graph_objs as go
+from plotly.subplots import make_subplots
 
 Total_salary = 63000
 Fixed_expenses = 10000
@@ -102,8 +104,7 @@ df['Bank'] = df['Bank'].astype(float)
 df['Total_assests'] = df['Total_assests'].astype(float)
 
 
-import plotly.graph_objs as go
-from plotly.subplots import make_subplots
+
 
 # 確保日期格式正確
 df.index = df.index.to_timestamp()
